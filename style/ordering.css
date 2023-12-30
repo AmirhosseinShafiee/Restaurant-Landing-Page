@@ -1,0 +1,83 @@
+.ordering{
+	grid-column: 1 / -1;
+}
+
+.ordering .ordering-informations{
+	display: grid;
+	grid-template-columns: 50px repeat(4, 1fr) 50px;
+	padding: 50px;
+	background-image: url(../images/negative-space-cafe-restaurant-design-food-coffee-bar-bike-thumb-1.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(25%);
+}
+
+.ordering-informations .section{
+	display: grid;
+	text-align: center;
+	padding: 15px;
+}
+
+.ordering-informations .left{
+	grid-template-rows: 0.5fr 0.2fr repeat(3,0.1fr) ;
+	grid-column: 2 / 3;
+	background: #202020;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.ordering-informations .left p:nth-child(2){
+	color: var(--mclr);
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 0.75rem;
+}
+
+.ordering-informations .right{
+	grid-template-rows: 0.1fr 0.2fr 0.1fr 0.2fr 0.3fr;
+	grid-column: 3 / 6;
+	background: rgba(225,225,225, 0.8);
+}
+
+.ordering-informations .right i{
+	color: #EF6C00;
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+.ordering-informations .right div{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 50px;
+	margin-top: 30px;
+}
+
+.ordering-informations .right img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.ordering .title{
+	display: block;
+}
+
+@media screen and (max-width: 670px){
+	.ordering-informations{
+		grid-template-rows: repeat(3,1fr);
+	}
+	.ordering-informations .left{
+		grid-template-rows: 0.25fr 0.2fr repeat(3,0.1fr) ;
+		grid-column: 2 / 6;
+		grid-row: 1 / 2;
+	}
+
+	.ordering-informations .right{
+		grid-row: 2 / 4;
+		grid-column: 2 / 6;
+		font-size: 0.35rem;
+	}
+}
